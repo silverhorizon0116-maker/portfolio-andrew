@@ -1,46 +1,77 @@
-import { FC, useRef } from 'react';
+import { FC, memo, useCallback, useMemo, useState } from 'react';
 
-const ContactForm: FC = () => {
-  const nameRef = useRef<HTMLInputElement>(null);
-  const messageRef = useRef<HTMLTextAreaElement>(null);
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
-  const handleSend = (e: React.FormEvent) => {
-    e.preventDefault();
+const ContactForm: FC = memo(() => {
+  const defaultData = useMemo(
+    () => ({
+      name: '',
+      email: '',
+      message: '',
+    }),
+    []
+  );
 
-    const recipient = 'youremail@example.com'; // Replace with your email
-    const name = nameRef.current?.value || '';
-    const message = messageRef.current?.value || '';
+  const [data, setData] = useState<FormData>(defaultData);
 
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(message);
+  const onChange = useCallback(
+    <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
+      const { name, value } = event.target;
+      setData((prev) => ({ ...prev, [name]: value }));
+    },
+    []
+  );
 
-    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-  };
+  const handleSendMessage = useCallback(
+    (event: React.FormEvent<HTMLFormElement>) => {
+      event.preventDefault();
+
+      const { name, email, message } = data;
+
+      // Replace with the email address you want to receive messages
+      const recipient = 'goldhorizon0116@gmail.com';
+
+      const subject = encodeURIComponent(`Message from ${name}`);
+      const body = encodeURIComponent(`From: ${name} <${email}>\n\n${message}`);
+
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+
+      window.open(gmailUrl, '_blank');
+    },
+    [data]
+  );
 
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
   return (
     <form
-      className="grid min-h-[200px] grid-cols-1 gap-y-4"
-      onSubmit={handleSend}
+      className="grid min-h-[320px] grid-cols-1 gap-y-4"
+      method="POST"
+      onSubmit={handleSendMessage}
     >
       <input
         className={inputClasses}
         name="name"
+        onChange={onChange}
         placeholder="Name"
         required
         type="text"
-        ref={nameRef}
+        value={data.name}
       />
       <textarea
         className={inputClasses}
         maxLength={250}
         name="message"
+        onChange={onChange}
         placeholder="Message"
         required
         rows={6}
-        ref={messageRef}
+        value={data.message}
       />
       <button
         aria-label="Submit contact form"
@@ -51,6 +82,7 @@ const ContactForm: FC = () => {
       </button>
     </form>
   );
-};
+});
 
+ContactForm.displayName = 'ContactForm';
 export default ContactForm;

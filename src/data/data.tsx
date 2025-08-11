@@ -111,7 +111,6 @@ export const aboutData: About = {
     { label: 'Nationality', text: 'Japanese / Australian', Icon: FlagIcon },
     { label: 'Interests', text: 'Music, Karate', Icon: SparklesIcon },
     { label: 'Study', text: 'University of Tokyo', Icon: AcademicCapIcon },
-    { label: 'Employment', text: 'FOURDIGIT, inc.', Icon: BuildingOffice2Icon },
   ],
 };
 
@@ -237,7 +236,7 @@ export const education: TimelineItem[] = [
 export const experience: TimelineItem[] = [
   {
     date: 'March 2020 - Present',
-    location: 'Awesome Development Company',
+    location: 'Freelance',
     title: 'Senior Full Stack Developer',
     content: (
       <p>
@@ -250,7 +249,7 @@ export const experience: TimelineItem[] = [
   },
   {
     date: 'March 2018 - February 2020',
-    location: 'Garage Startup Studio',
+    location: 'ABC Tech Solutions',
     title: 'Full Stack Developer',
     content: (
       <p>

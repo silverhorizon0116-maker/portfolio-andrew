@@ -23,6 +23,9 @@ import porfolioImage6 from '../images/portfolio/portfolio-6.jpg';
 import porfolioImage7 from '../images/portfolio/portfolio-7.jpg';
 import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
+import avatar1 from '../images/avatar1.jpg';
+import avatar2 from '../images/avatar2.jpg';
+import avatar3 from '../images/avatar3.jpg';
 import {
   About,
   ContactSection,
@@ -98,14 +101,15 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `
-      Proficient Full Stack Developer with 10+ years of experience developing scalable web applications using JavaScript, 
-      React, Node.js, and MongoDB, including game engineering. Worked at FOURDIGIT for 4 year and Rikkeisoft for 6 years, 
-      gaining experience in developing innovative solutions for clients in various industries.`,
+      PSenior Full Stack Developer with 7+ years of professional experience designing, developing,
+      and delivering high-quality software solutions. Adept at bridging front-end and back-end
+      development, optimizing system performance, and collaborating with global teams to meet
+      tight deadlines.`,
   aboutItems: [
     { label: 'Location', text: 'Tokyo, Japan', Icon: MapIcon },
     { label: 'Age', text: '29', Icon: CalendarIcon },
     { label: 'Nationality', text: 'Japanese / Australian', Icon: FlagIcon },
-    { label: 'Interests', text: 'Musics, Karate', Icon: SparklesIcon },
+    { label: 'Interests', text: 'Music, Karate', Icon: SparklesIcon },
     { label: 'Study', text: 'University of Tokyo', Icon: AcademicCapIcon },
     { label: 'Employment', text: 'FOURDIGIT, inc.', Icon: BuildingOffice2Icon },
   ],
@@ -116,63 +120,53 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Frontend Development',
     skills: [
-      {
-        name: 'Japanese',
-        level: 10,
-      },
-      {
-        name: 'English',
-        level: 4,
-      },
+      { name: 'React', level: 5 },
+      { name: 'Vue.js', level: 5 },
+      { name: 'TypeScript', level: 5 },
+      { name: 'JavaScript', level: 5 },
+      { name: 'HTML', level: 5 },
+      { name: 'CSS', level: 5 },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Backend Development',
     skills: [
-      {
-        name: 'React',
-        level: 9,
-      },
-      {
-        name: 'Typescript',
-        level: 7,
-      },
+      { name: 'Node.js', level: 5 },
+      { name: 'Express', level: 5 },
+      { name: 'PHP', level: 4 },
+      { name: 'Laravel', level: 4 },
+      { name: 'SQL', level: 5 },
+      { name: 'Rust', level: 4 },
+      { name: 'Go', level: 4 },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Databases',
     skills: [
-      {
-        name: 'Node.js',
-        level: 8,
-      },
-      {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
+      { name: 'PostgreSQL', level: 5 },
+      { name: 'MySQL', level: 5 },
+      { name: 'MongoDB', level: 5 },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Mobile Development',
     skills: [
-      {
-        name: 'React Native',
-        level: 9,
-      },
-      {
-        name: 'Flutter',
-        level: 4,
-      },
-      {
-        name: 'Swift',
-        level: 3,
-      },
+      { name: 'React Native', level: 5 },
+      { name: 'Flutter', level: 4 },
+      { name: 'Swift', level: 3 },
+    ],
+  },
+  {
+    name: 'Tools & Platforms',
+    skills: [
+      { name: 'Git', level: 5 },
+      { name: 'Docker', level: 5 },
+      { name: 'AWS', level: 5 },
+      { name: 'GCP', level: 4 },
+      { name: 'CI/CD', level: 4 },
+      { name: 'REST APIs', level: 5 },
     ],
   },
 ];
@@ -182,21 +176,21 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Sumup',
+    title: 'Save a Childs Heart',
     description: '',
-    url: 'https://sumup.com',
+    url: 'https://25.saveachildsheart.org/',
     image: porfolioImage1,
   },
   {
-    title: 'Wanderlog',
+    title: 'Backroads',
     description: '',
-    url: 'https://wanderlog.com',
+    url: 'https://www.backroads.com/',
     image: porfolioImage2,
   },
   {
-    title: 'Apollo Universal Starter Kit',
+    title: 'Arcreal',
     description: '',
-    url: 'https://sysgears.com/work/apollo-starter-kit/',
+    url: 'https://arcreal.com/',
     image: porfolioImage7,
   },
   {
@@ -206,21 +200,21 @@ export const portfolioItems: PortfolioItem[] = [
     image: porfolioImage3,
   },
   {
-    title: 'Hybrent',
+    title: 'Health at Home',
     description: '',
-    url: 'https://hybrent.com',
+    url: 'https://impilo.health/',
     image: porfolioImage4,
   },
   {
-    title: 'Paxintrade',
+    title: 'Species in Pieces',
     description: '',
-    url: 'https://paxintrade.com',
+    url: 'http://species-in-pieces.com/',
     image: porfolioImage5,
   },
   {
-    title: 'TMC Motors',
+    title: 'Active Theory',
     description: '',
-    url: 'https://www.tmcmotors.co.uk/',
+    url: 'https://activetheory.net/',
     image: porfolioImage6,
   },
 
@@ -235,34 +229,34 @@ export const education: TimelineItem[] = [
     location: 'University of Tokyo',
     title: 'Masters in Computer Science',
     content: <p>Gained extensive understanding about overall IT field,
-      strong technical background about Human Compuer Interface and Artificial Intelligence.
+      strong technical background about Human Computer Interface and Artificial Intelligence.
     </p>,
   }
 ];
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2019 - Present',
+    date: 'March 2020 - Present',
     location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    title: 'Senior Full Stack Developer',
     content: (
       <p>
-        As a Senior Full Stack Developer at [Company Name], I led the design, development,
-        and scaling of complex web applications, utilizing technologies such as React, Node.js,
-        and AWS. My role involved driving both front-end and back-end architecture, ensuring high-performance,
-        scalable solutions, and seamless user experiences.
+        Led end-to-end client projects with a focus on scalability and performance. Designed RESTful APIs,
+        integrated third-party services, and developed responsive front-end applications using React, Vue.js,
+        and modern JavaScript frameworks. Experienced in managing cloud deployments (AWS, GCP) and CI/CD pipelines
+        for efficient releases.
       </p>
     ),
   },
   {
-    date: 'March 2015 - February 2010',
+    date: 'March 2018 - February 2020',
     location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    title: 'Full Stack Developer',
     content: (
       <p>
-        As a full-stack developer, I contributed to developing and scaling
-        innovative web applications using React, Node.js, and AWS, driving both front-end and
-        back-end solutions while ensuring a seamless user experience and system performance.
+        Experienced Full Stack Developer skilled in building and maintaining enterprise web applications
+        using Node.js, Express, and relational databases (PostgreSQL, MySQL). Strong collaborator with
+        designers and product managers to enhance UX/UI, and committed to product stability through comprehensive testing.
       </p>
     ),
   },
@@ -277,17 +271,17 @@ export const testimonial: TestimonialSection = {
     {
       name: 'John Pod',
       text: 'Andrew is highly trustable developer. He always keeps he said.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      image: avatar1,
     },
     {
       name: 'Jane Alexender',
-      text: 'Before I met him, I didn\'t know what is a really innoviate idea.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      text: 'Before I met him, I didn\'t know what is a really innovative idea.',
+      image: avatar2,
     },
     {
       name: 'Akira Nakamura',
-      text: 'I am really happy with the days I worked with him.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      text: 'I truly enjoyed working with him.',
+      image: avatar3,
     },
   ],
 };

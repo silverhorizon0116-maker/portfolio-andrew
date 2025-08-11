@@ -12,6 +12,30 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  /* Fade-up animation */
+  .fade-up {
+    @apply opacity-0 translate-y-4 transition-all duration-500 ease-out;
+  }
+  .fade-up.show {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Fade-in animation */
+  .fade-in {
+    @apply opacity-0 transition-opacity duration-500 ease-out;
+  }
+  .fade-in.show {
+    @apply opacity-100;
+  }
+
+  /* Scale-in animation */
+  .scale-in {
+    @apply opacity-0 scale-95 transition-all duration-500 ease-out;
+  }
+  .scale-in.show {
+    @apply opacity-100 scale-100;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {

@@ -2,7 +2,6 @@ import {  ChevronUpIcon } from '@heroicons/react/24/solid';
 import { FC, memo } from 'react';
 
 import { SectionId } from '../../data/data';
-import Socials from '../Socials';
 
 const currentYear = new Date().getFullYear();
 
@@ -16,9 +15,6 @@ const Footer: FC = memo(() => (
       </a>
     </div>
     <div className="flex flex-col items-center gap-y-6">
-      <div className="flex gap-x-4 text-neutral-500">
-        <Socials />
-      </div>
       <a
         className="-m-2 flex items-center gap-x-1 rounded-md p-2 ring-yellow focus:outline-none focus:ring-2"
         href="https://reactresume.com">

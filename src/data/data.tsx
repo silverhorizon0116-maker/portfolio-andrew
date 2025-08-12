@@ -71,7 +71,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Tokyo based Full Stack Software Engineer with 7+ years of experience.
+        I'm a Tokyo based Full Stack Software Engineer with 10+ years of experience.
         <br />
         I don't just build perfect products; I build excellent ones.
         <br />
@@ -100,7 +100,7 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `
-      PSenior Full Stack Developer with 7+ years of professional experience designing, developing,
+      Senior Full Stack Developer with 10+ years of professional experience designing, developing,
       and delivering high-quality software solutions. Adept at bridging front-end and back-end
       development, optimizing system performance, and collaborating with global teams to meet
       tight deadlines.`,
@@ -122,10 +122,10 @@ export const skills: SkillGroup[] = [
     skills: [
       { name: 'React', level: 5 },
       { name: 'Vue.js', level: 5 },
+      { name: 'Next.js', level: 5 },
       { name: 'TypeScript', level: 5 },
       { name: 'JavaScript', level: 5 },
-      { name: 'HTML', level: 5 },
-      { name: 'CSS', level: 5 },
+      { name: 'SASS/SCSS', level: 5 },
     ],
   },
   {
@@ -267,17 +267,17 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Pod',
+      name: 'Jane Alexender',
       text: 'Andrew is highly trustable developer. He always keeps he said.',
       image: avatar1,
     },
     {
-      name: 'Jane Alexender',
+      name: 'Cyrus Whitford',
       text: 'Before I met him, I didn\'t know what is a really innovative idea.',
       image: avatar2,
     },
     {
-      name: 'Akira Nakamura',
+      name: 'Aldric Stonewell',
       text: 'I truly enjoyed working with him.',
       image: avatar3,
     },
